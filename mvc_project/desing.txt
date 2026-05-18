@@ -1,0 +1,49 @@
+EmployeeManagementSystem
+│
+├── EMS.Web
+│   ├── Areas
+│   │   ├── Admin
+│   │   │   ├── Controllers
+│   │   │   ├── Views
+│   │   │   └── Models
+│   │   │
+│   │   └── Employee
+│   │       ├── Controllers
+│   │       ├── Views
+│   │       └── Models
+│   │
+│   ├── Controllers
+│   ├── Views
+│   ├── wwwroot
+│   │   ├── css
+│   │   ├── js
+│   │   ├── lib
+│   │   └── uploads
+│   │
+│   ├── Filters
+│   ├── Middleware
+│   ├── Helpers
+│   ├── Hubs
+│   ├── appsettings.json
+│   └── Program.cs
+│
+├── EMS.Domain
+│   ├── Entities
+│   └── Common
+│
+├── EMS.Application
+│   ├── DTOs
+│   ├── Interfaces
+│   ├── Services
+│   └── Validators
+│
+├── EMS.Infrastructure
+│   ├── Data
+│   ├── Repositories
+│   ├── RepositoriesADO
+│   ├── Authentication
+│   └── Cache
+│
+└── EMS.Tests
+    ├── UnitTests
+    └── IntegrationTests

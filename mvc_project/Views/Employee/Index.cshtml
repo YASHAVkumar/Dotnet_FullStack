@@ -1,0 +1,44 @@
+@model X.PagedList.IPagedList<mvc_project.EMS.Domain.Entities.Employee>
+
+@using X.PagedList.Mvc.Core
+
+<form method="get">
+    <input type="text"
+           name="search"
+           placeholder="Search Employee" />
+
+    <button type="submit">
+        Search
+    </button>
+</form>
+
+<a asp-action="Create"
+       class="btn btn-primary">
+    Add Employee
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Department</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.PagedListPager(
+    Model,
+    page => Url.Action("Index",
+    new { page }))
